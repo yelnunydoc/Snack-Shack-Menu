@@ -23,14 +23,8 @@
         }
 
         function logPurchase() {
-            var customerName = document.getElementById('customerName').value;
-            if (!customerName) {
-                alert("Please enter your name.");
-                return;
-            }
-
             var items = document.getElementsByClassName('item');
-            var purchaseInfo = 'Purchase Information:\nName: ' + customerName + '\n';
+            var purchaseInfo = 'Purchase Information:\n';
 
             for (var i = 0; i < items.length; i++) {
                 var quantity = items[i].value;
@@ -47,10 +41,6 @@
 </head>
 <body>
     <h1>Snack Shack Menu</h1>
-<div>
-    <label for="customerName">Name:</label>
-    <input type="text" id="customerName" name="customerName" required>
-</div>
 
     <!-- Insert your menu items here -->
     <div class="menu-section">
