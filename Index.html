@@ -23,26 +23,26 @@
         }
 
         function logPurchase() {
-    var customerName = document.getElementById('customerName').value;
-    if (!customerName) {
-        alert("Please enter your name.");
-        return;
-    }
+            var customerName = document.getElementById('customerName').value;
+            if (!customerName) {
+                alert("Please enter your name.");
+                return;
+            }
 
-    var items = document.getElementsByClassName('item');
-    var purchaseInfo = 'Purchase Information:\nName: ' + customerName + '\n';
+            var items = document.getElementsByClassName('item');
+            var purchaseInfo = 'Purchase Information:\nName: ' + customerName + '\n';
 
-    for (var i = 0; i < items.length; i++) {
-        var quantity = items[i].value;
-        var itemName = items[i].closest('.menu-item').textContent.split('-')[0].trim();
-        if (quantity > 0) {
-            purchaseInfo += itemName + ': Quantity ' + quantity + '\n';
+            for (var i = 0; i < items.length; i++) {
+                var quantity = items[i].value;
+                var itemName = items[i].closest('.menu-item').textContent.split('-')[0].trim();
+                if (quantity > 0) {
+                    purchaseInfo += itemName + ': Quantity ' + quantity + '\n';
+                }
+            }
+
+            console.log(purchaseInfo);
+            alert(purchaseInfo); // Display the information to the user
         }
-    }
-
-    console.log(purchaseInfo);
-    alert(purchaseInfo); // Display the information to the user
-}
     </script>
 </head>
 <body>
